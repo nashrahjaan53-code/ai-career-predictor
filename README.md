@@ -1,4 +1,4 @@
-# 🔮 AI Career Path Predictor using Semi-Supervised Self-Training
+#  AI Career Path Predictor using Semi-Supervised Self-Training
 
 [![Python Version](https://img.shields.io/badge/Python-3.13+-blue.svg)](https://www.python.org/)
 [![ML Framework](https://img.shields.io/badge/Framework-Scikit--Learn-orange.svg)](https://scikit-learn.org/)
@@ -8,14 +8,14 @@ An end-to-end Machine Learning pipeline that predicts tech career paths (Softwar
 
 ---
 
-## 📌 Project Overview & Problem Statement
+##  Project Overview & Problem Statement
 In real-world data science, labeling data requires massive human effort, time, and budget. This project mimics this bottleneck by creating a data-scarce scenario. 
 
 Instead of downloading a massive pre-labeled CSV, we use `scikit-learn`'s native dataset generation tools to spin up a 1,000-profile database on the fly. We then **intentionally hide 75% of the career targets**, forcing a semi-supervised wrapper to bridge the gap and pseudo-label the remaining data points based on feature similarities.
 
 ---
 
-## 🧠 Methodology & Algorithm Architecture
+##  Methodology & Algorithm Architecture
 
 ### 1. Data Synthesis & Engineering
 A 5-dimensional feature matrix is generated using `make_classification`. To align with scikit-learn's internal feature rules ($n_{\text{informative}} + n_{\text{redundant}} + n_{\text{repeated}} < n_{\text{features}}$), redundant features are explicitly set to zero, mapping neatly into realistic professional scorecards:
